@@ -1,0 +1,16 @@
+{
+    "auto_install": [
+        {
+            "image": "/ru-ru_windows_11_26h1.iso",
+            "template": [
+                "/ventoy/autounattend.xml"
+            ]
+        },
+        {
+            "image": "/ru-ru_windows_10_22h2.iso",
+            "template": [
+                "/ventoy/autounattend.xml"
+            ]
+        }
+    ]
+}
