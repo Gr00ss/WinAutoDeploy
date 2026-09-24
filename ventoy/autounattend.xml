@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <unattend xmlns="urn:schemas-microsoft-com:unattend" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State">
-	<!--https://schneegans.de/windows/unattend-generator/?LanguageMode=Unattended&UILanguage=ru-RU&Locale=ru-RU&Keyboard=00000419&GeoLocation=203&PEMode=Generated&InstallFromMode=Edition&InstallFromEdition=pro&PartitionMode=Unattended&TargetDisk=0&PartitionLayout=Automatic&SystemSize=300&RecoveryMode=Partition&RecoverySize=1000&DiskAssertionMode=Generated&AssertMinSize=70&AssertMaxSize=4000&AssertInterfaceType=true&AssertMediaType=true&PagingFileMode=Automatic&ProcessorArchitecture=amd64&BypassRequirementsCheck=true&BypassNetworkCheck=true&ComputerNameMode=Random&TimeZoneMode=Implicit&UserAccountMode=Unattended&AccountName0=User&AccountDisplayName0=&AccountPassword0=&AccountGroup0=Administrators&AutoLogonMode=Own&PasswordExpirationMode=Unlimited&LockoutMode=Default&HideFiles=Hidden&TaskbarSearch=Icon&TaskbarIconsMode=Default&StartTilesMode=Default&StartPinsMode=Default&DisableWindowsUpdate=true&DisableSmartScreen=true&EnableRemoteDesktop=true&AllowPowerShellScripts=true&HideEdgeFre=true&DisableEdgeStartupBoost=true&DeleteWindowsOld=true&EffectsMode=Default&DesktopIconsMode=Default&StartFoldersMode=Default&CoreIsolationMode=Enabled&WifiMode=Skip&ExpressSettings=DisableAll&LockKeysMode=Skip&StickyKeysMode=Default&ColorMode=Default&WallpaperMode=Default&LockScreenMode=Default&FirstLogonScript0=%40echo+off%0D%0Aset+%22startupPath%3DC%3A%5CProgramData%5CMicrosoft%5CWindows%5CStart+Menu%5CPrograms%5CStartUp%5CDeployLauncher.cmd%22%0D%0A%0D%0Aecho+%40echo+off+%3E+%22%25startupPath%25%22%0D%0Aecho+mode+con%3A+cols%3D80+lines%3D15+%3E%3E+%22%25startupPath%25%22%0D%0Aecho+echo+%3D%3D%3D+%D0%9E%D0%B6%D0%B8%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B4%D0%B8%D1%81%D0%BA%D0%B0+%D1%81+%D0%BF%D0%B0%D0%BF%D0%BA%D0%BE%D0%B9+Deploy+%3D%3D%3D+%3E%3E+%22%25startupPath%25%22%0D%0Aecho+%3ALOOP+%3E%3E+%22%25startupPath%25%22%0D%0Aecho+powershell.exe+-NoProfile+-ExecutionPolicy+Bypass+-Command+%22%24d+%3D+%28Get-Volume%29.Where%28%7BTest-Path+%28%24_.DriveLetter+%2B+%27%3A%5CDeploy%5CMainInstall.ps1%27%29%7D%29.DriveLetter%3B+if+%28%24d%29+%7B+Start-Process+powershell.exe+-ArgumentList+%27-NoProfile+-ExecutionPolicy+Bypass+-File+%5C%22%24d%3A%5CDeploy%5CMainInstall.ps1%5C%22%27+-Verb+RunAs+%3B+exit+0+%7D+else+%7B+exit+1+%7D%22+%3E%3E+%22%25startupPath%25%22%0D%0Aecho+if+%25%25ERRORLEVEL%25%25+EQU+0+goto+DONE+%3E%3E+%22%25startupPath%25%22%0D%0Aecho+timeout+%2Ft+3+%2Fnobreak+%5E%3E+nul+%3E%3E+%22%25startupPath%25%22%0D%0Aecho+goto+LOOP+%3E%3E+%22%25startupPath%25%22%0D%0Aecho+%3ADONE+%3E%3E+%22%25startupPath%25%22%0D%0Aecho+del+%22%25%25~f0%22+%3E%3E+%22%25startupPath%25%22&FirstLogonScriptType0=Ps1&AppLockerMode=Skip-->
+	<!--https://schneegans.de/windows/unattend-generator/?LanguageMode=Unattended&UILanguage=ru-RU&Locale=ru-RU&Keyboard=00000419&GeoLocation=203&PEMode=Generated&InstallFromMode=Edition&InstallFromEdition=pro&PartitionMode=Unattended&TargetDiskMode=Generated&TargetDiskInterfaceType=true&TargetDiskMediaType=true&TargetDiskSize=true&TargetDiskMinSize=70&TargetDiskMaxSize=4000&TargetDiskIndex=true&TargetDisk=0&PartitionLayout=Automatic&SystemSize=300&RecoveryMode=Partition&RecoverySize=1000&DiskAssertionMode=Generated&AssertMinSize=70&AssertMaxSize=4000&AssertInterfaceType=true&AssertMediaType=true&PagingFileMode=Automatic&ProcessorArchitecture=amd64&BypassRequirementsCheck=true&BypassNetworkCheck=true&ComputerNameMode=Random&TimeZoneMode=Implicit&UserAccountMode=Unattended&AccountName0=User&AccountDisplayName0=&AccountPassword0=&AccountGroup0=Administrators&AutoLogonMode=Own&PasswordExpirationMode=Unlimited&LockoutMode=Default&HideFiles=Hidden&TaskbarSearch=Icon&TaskbarIconsMode=Default&StartTilesMode=Default&StartPinsMode=Default&DisableWindowsUpdate=true&DisableSmartScreen=true&EnableRemoteDesktop=true&AllowPowerShellScripts=true&HideEdgeFre=true&DisableEdgeStartupBoost=true&DeleteWindowsOld=true&EffectsMode=Default&DesktopIconsMode=Default&StartFoldersMode=Default&CoreIsolationMode=Enabled&WifiMode=Skip&ExpressSettings=DisableAll&LockKeysMode=Skip&StickyKeysMode=Default&ColorMode=Default&WallpaperMode=Default&LockScreenMode=Default&FirstLogonScript0=%24Path+%3D+%22%24env%3AProgramData%5CMicrosoft%5CWindows%5CStart+Menu%5CPrograms%5CStartUp%5CDeployLauncher.cmd%22%0D%0A%24Content+%3D+%40%27%0D%0A%40echo+off%0D%0Atitle+Deploy+Launcher%0D%0Amode+con%3A+cols%3D80+lines%3D15%0D%0Aecho+%3D%3D%3D+Waiting+for+Deploy+drive+%3D%3D%3D%0D%0A%0D%0A%3ALOOP%0D%0Aset+%22TARGET%3D%22%0D%0Afor+%25%25d+in+%28C+D+E+F+G+H+I+J+K+L+M+N+O+P+Q+R+S+T+U+V+W+X+Y+Z%29+do+%28%0D%0A++++if+exist+%22%25%25d%3A%5CDeploy%5CMainInstall.ps1%22+%28%0D%0A++++++++set+%22TARGET%3D%25%25d%3A%5CDeploy%5CMainInstall.ps1%22%0D%0A++++++++goto+FOUND%0D%0A++++%29%0D%0A%29%0D%0A%0D%0Atimeout+%2Ft+3+%2Fnobreak+%3Enul%0D%0Agoto+LOOP%0D%0A%0D%0A%3AFOUND%0D%0Aecho+Found+deploy+script+at%3A+%25TARGET%25%0D%0Aecho+Requesting+administrator+privileges...%0D%0A%0D%0Apowershell.exe+-NoProfile+-ExecutionPolicy+Bypass+-Command+%22Start-Process+powershell.exe+-ArgumentList+%27-NoProfile+-ExecutionPolicy+Bypass+-File+%5C%22%25TARGET%25%5C%22%27+-Verb+RunAs%22%0D%0A%0D%0Adel+%22%25~f0%22%0D%0Aexit%0D%0A%27%40%0D%0A%0D%0A%5BSystem.IO.File%5D%3A%3AWriteAllLines%28%24Path%2C+%24Content%29&FirstLogonScriptType0=Ps1&AppLockerMode=Skip-->
 	<settings pass="offlineServicing"></settings>
 	<settings pass="windowsPE">
 		<component name="Microsoft-Windows-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
@@ -35,98 +35,146 @@
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
 					<Order>8</Order>
-					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:for /R ^%PEDRIVERS_FOLDER^% ^%^%f IN (*.inf^) do drvload.exe ^"^%^%f^"&amp;echo:^)&amp;echo:^&gt;X:\assert.vbs (&amp;echo:echo:Function Fail(message^^^)&amp;echo:echo:WScript.Echo message&amp;echo:echo:WScript.Quit 1&amp;echo:echo:End Function)</Path>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:for /R ^%PEDRIVERS_FOLDER^% ^%^%f IN (*.inf^) do drvload.exe ^"^%^%f^"&amp;echo:^)&amp;echo:^&gt;X:\target.vbs (&amp;echo:echo:Function Fail(message^^^)&amp;echo:echo:WScript.Echo message&amp;echo:echo:WScript.Quit 1&amp;echo:echo:End Function)</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
 					<Order>9</Order>
-					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:On Error Resume Next&amp;echo:echo:Set wmi = GetObject(^^^"winmgmts:\\.\root\cimv2^^^"^^^)&amp;echo:echo:Set drive = wmi.Get(^^^"Win32_DiskDrive.DeviceID='\\.\PHYSICALDRIVE0'^^^"^^^)&amp;echo:echo:If Err.Number ^^^&lt;^^^&gt; 0 Then)</Path>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:On Error Resume Next&amp;echo:echo:Set wmi = GetObject(^^^"winmgmts:\\.\root\cimv2^^^"^^^)&amp;echo:echo:Set drives = wmi.InstancesOf(^^^"Win32_DiskDrive^^^"^^^)&amp;echo:echo:If Err.Number ^^^&lt;^^^&gt; 0 Then)</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
 					<Order>10</Order>
-					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:Fail ^^^"Could not locate disk 0 (^^^" ^^^&amp; Err.Description ^^^&amp; ^^^"^^^).^^^"&amp;echo:echo:End If&amp;echo:echo:actual = drive.InterfaceType&amp;echo:echo:If actual ^^^&lt;^^^&gt; ^^^"IDE^^^" And actual ^^^&lt;^^^&gt; ^^^"SCSI^^^" Then)</Path>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:Fail ^^^"Could not enumerate disks: ^^^" ^^^&amp; Err.Description&amp;echo:echo:End If&amp;echo:echo:Set accepted = CreateObject(^^^"Scripting.Dictionary^^^"^^^)&amp;echo:echo:For Each drive In drives&amp;echo:echo:accept = True)</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
 					<Order>11</Order>
-					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:Fail ^^^"InterfaceType '^^^" ^^^&amp; actual ^^^&amp; ^^^"' of disk 0 is unexpected.^^^"&amp;echo:echo:End If&amp;echo:echo:actual = drive.MediaType&amp;echo:echo:If actual ^^^&lt;^^^&gt; ^^^"Fixed hard disk media^^^" Then)</Path>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:actual = drive.InterfaceType&amp;echo:echo:If actual ^^^&lt;^^^&gt; ^^^"IDE^^^" And actual ^^^&lt;^^^&gt; ^^^"SCSI^^^" Then&amp;echo:echo:accept = False&amp;echo:echo:End If&amp;echo:echo:actual = drive.MediaType)</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
 					<Order>12</Order>
-					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:Fail ^^^"MediaType '^^^" ^^^&amp; actual ^^^&amp; ^^^"' of disk 0 is unexpected.^^^"&amp;echo:echo:End If&amp;echo:echo:actual = CInt(drive.Size / 1024 / 1024 / 1024^^^)&amp;echo:echo:expected = 70&amp;echo:echo:If actual ^^^&lt; expected Then)</Path>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:If actual ^^^&lt;^^^&gt; ^^^"Fixed hard disk media^^^" Then&amp;echo:echo:accept = False&amp;echo:echo:End If&amp;echo:echo:actual = CInt(drive.Size / 1024 / 1024 / 1024^^^)&amp;echo:echo:expected = 70&amp;echo:echo:If actual ^^^&lt; expected Then)</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
 					<Order>13</Order>
-					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:Fail ^^^"Size of disk 0 is expected to be at least ^^^" ^^^&amp; expected ^^^&amp; ^^^" GiB, but actually is ^^^" ^^^&amp; actual ^^^&amp; ^^^" GiB.^^^"&amp;echo:echo:End If&amp;echo:echo:actual = CInt(drive.Size / 1024 / 1024 / 1024^^^))</Path>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:accept = False&amp;echo:echo:End If&amp;echo:echo:actual = CInt(drive.Size / 1024 / 1024 / 1024^^^)&amp;echo:echo:expected = 4000&amp;echo:echo:If actual ^^^&gt; expected Then&amp;echo:echo:accept = False&amp;echo:echo:End If)</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
 					<Order>14</Order>
-					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:expected = 4000&amp;echo:echo:If actual ^^^&gt; expected Then&amp;echo:echo:Fail ^^^"Size of disk 0 is expected to be at most ^^^" ^^^&amp; expected ^^^&amp; ^^^" GiB, but actually is ^^^" ^^^&amp; actual ^^^&amp; ^^^" GiB.^^^"&amp;echo:echo:End If)</Path>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:actual = drive.Index&amp;echo:echo:expected = 0&amp;echo:echo:If actual ^^^&lt;^^^&gt; expected Then&amp;echo:echo:accept = False&amp;echo:echo:End If&amp;echo:echo:If accept Then&amp;echo:echo:accepted.Add drive.Index, ^^^"^^^"&amp;echo:echo:End If)</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
 					<Order>15</Order>
-					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:WScript.Echo ^^^"Disk assertions were satisfied.^^^"&amp;echo:echo:WScript.Quit 0&amp;echo:^)&amp;echo:call :print ^"Running disk assertions^")</Path>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:Next&amp;echo:echo:If accepted.Count = 0 Then&amp;echo:echo:Fail ^^^"No disk satisfied the given criteria.^^^"&amp;echo:echo:ElseIf accepted.Count ^^^&gt; 1 Then)</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
 					<Order>16</Order>
-					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:cscript.exe //E:vbscript ^"X:\assert.vbs^" //Nologo ^|^| call :fail ^"Disk assertion failed. Windows Setup will halt to avoid potential data loss.^"&amp;echo:^&gt;X:\GPT.txt (&amp;echo:echo:SELECT DISK=0&amp;echo:echo:CLEAN)</Path>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:Fail ^^^"Several disks (^^^" ^^^&amp; Join(accepted.Keys, ^^^", ^^^"^^^) ^^^&amp; ^^^"^^^) satisfied the given criteria.^^^"&amp;echo:echo:Else&amp;echo:echo:WScript.Echo Join(accepted.Keys^^^)&amp;echo:echo:WScript.Quit 0&amp;echo:echo:End If)</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
 					<Order>17</Order>
-					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:CONVERT GPT&amp;echo:echo:CREATE PARTITION EFI SIZE=300&amp;echo:echo:FORMAT QUICK FS=FAT32 LABEL=^^^"System^^^"&amp;echo:echo:ASSIGN LETTER=S&amp;echo:echo:CREATE PARTITION MSR SIZE=16&amp;echo:echo:CREATE PARTITION PRIMARY)</Path>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:^)&amp;echo:call :print ^"Determining target disk^")</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
 					<Order>18</Order>
-					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:SHRINK MINIMUM=1000&amp;echo:echo:FORMAT QUICK FS=NTFS LABEL=^^^"Windows^^^"&amp;echo:echo:ASSIGN LETTER=W&amp;echo:echo:CREATE PARTITION PRIMARY&amp;echo:echo:FORMAT QUICK FS=NTFS LABEL=^^^"Recovery^^^"&amp;echo:echo:ASSIGN LETTER=R)</Path>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:(cscript.exe //E:vbscript ^"X:\target.vbs^" //Nologo ^&gt;X:\target.out^) ^|^| (type X:\target.out ^&amp; call :fail ^"Could not determine target disk. Windows Setup will halt to avoid potential data loss.^"^))</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
 					<Order>19</Order>
-					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:SET ID=^^^"de94bba4-06d1-4d40-a16a-bfd50179d6ac^^^"&amp;echo:echo:GPT ATTRIBUTES=0x8000000000000001&amp;echo:^)&amp;echo:^&gt;X:\MBR.txt (&amp;echo:echo:SELECT DISK=0&amp;echo:echo:CLEAN&amp;echo:echo:CREATE PARTITION PRIMARY SIZE=300)</Path>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:for /f ^%^%t in (X:\target.out^) do set ^"TARGET_DISK=^%^%t^"&amp;echo:^&gt;X:\assert.vbs (&amp;echo:echo:Function Fail(message^^^)&amp;echo:echo:WScript.Echo message&amp;echo:echo:WScript.Quit 1&amp;echo:echo:End Function)</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
 					<Order>20</Order>
-					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:FORMAT QUICK FS=NTFS LABEL=^^^"System^^^"&amp;echo:echo:ASSIGN LETTER=S&amp;echo:echo:ACTIVE&amp;echo:echo:CREATE PARTITION PRIMARY&amp;echo:echo:SHRINK MINIMUM=1000&amp;echo:echo:FORMAT QUICK FS=NTFS LABEL=^^^"Windows^^^")</Path>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:On Error Resume Next&amp;echo:echo:Set wmi = GetObject(^^^"winmgmts:\\.\root\cimv2^^^"^^^)&amp;echo:echo:Set drive = wmi.Get(^^^"Win32_DiskDrive.DeviceID='\\.\PHYSICALDRIVE0'^^^"^^^)&amp;echo:echo:If Err.Number ^^^&lt;^^^&gt; 0 Then)</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
 					<Order>21</Order>
-					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:ASSIGN LETTER=W&amp;echo:echo:CREATE PARTITION PRIMARY&amp;echo:echo:FORMAT QUICK FS=NTFS LABEL=^^^"Recovery^^^"&amp;echo:echo:ASSIGN LETTER=R&amp;echo:echo:SET ID=27&amp;echo:^)&amp;echo:wpeutil.exe UpdateBootInfo)</Path>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:Fail ^^^"Could not locate disk 0 (^^^" ^^^&amp; Err.Description ^^^&amp; ^^^"^^^).^^^"&amp;echo:echo:End If&amp;echo:echo:actual = drive.InterfaceType&amp;echo:echo:If actual ^^^&lt;^^^&gt; ^^^"IDE^^^" And actual ^^^&lt;^^^&gt; ^^^"SCSI^^^" Then)</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
 					<Order>22</Order>
-					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:for /f ^"tokens=3^" ^%^%t in ('reg.exe query HKLM\System\CurrentControlSet\Control /v PEFirmwareType'^) do (&amp;echo:if ^%^%t == 0x1 (&amp;echo:set ^"LAYOUT=MBR^"&amp;echo:^) else if ^%^%t == 0x2 (&amp;echo:set ^"LAYOUT=GPT^"&amp;echo:^) else ()</Path>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:Fail ^^^"InterfaceType '^^^" ^^^&amp; actual ^^^&amp; ^^^"' of disk 0 is unexpected.^^^"&amp;echo:echo:End If&amp;echo:echo:actual = drive.MediaType&amp;echo:echo:If actual ^^^&lt;^^^&gt; ^^^"Fixed hard disk media^^^" Then)</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
 					<Order>23</Order>
-					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:call :fail ^"Unexpected value ^%^%t.^"&amp;echo:^)&amp;echo:^)&amp;echo:call :print ^"The target disk will be configured with the ^%LAYOUT^% partition layout^"&amp;echo:call :print ^"diskpart will now partition and format your disk^")</Path>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:Fail ^^^"MediaType '^^^" ^^^&amp; actual ^^^&amp; ^^^"' of disk 0 is unexpected.^^^"&amp;echo:echo:End If&amp;echo:echo:actual = CInt(drive.Size / 1024 / 1024 / 1024^^^)&amp;echo:echo:expected = 70&amp;echo:echo:If actual ^^^&lt; expected Then)</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
 					<Order>24</Order>
-					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:diskpart.exe /s X:\^%LAYOUT^%.txt ^|^| call :fail ^"diskpart.exe encountered an error.^"&amp;echo:set ^"IMG_PARAM=/Name:^"Windows ^%OS_VERSION^% Pro^"^"&amp;echo:call :print ^"Applying Windows image to target disk^")</Path>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:Fail ^^^"Size of disk 0 is expected to be at least ^^^" ^^^&amp; expected ^^^&amp; ^^^" GiB, but actually is ^^^" ^^^&amp; actual ^^^&amp; ^^^" GiB.^^^"&amp;echo:echo:End If&amp;echo:echo:actual = CInt(drive.Size / 1024 / 1024 / 1024^^^))</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
 					<Order>25</Order>
-					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:dism.exe /Apply-Image /ImageFile:^%IMAGE_FILE^% ^%SWM_PARAM^% ^%IMG_PARAM^% /ApplyDir:W:\ /CheckIntegrity /Verify ^|^| call :fail ^"dism.exe encountered an error.^"&amp;echo:call :print ^"Making system partition bootable^")</Path>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:expected = 4000&amp;echo:echo:If actual ^^^&gt; expected Then&amp;echo:echo:Fail ^^^"Size of disk 0 is expected to be at most ^^^" ^^^&amp; expected ^^^&amp; ^^^" GiB, but actually is ^^^" ^^^&amp; actual ^^^&amp; ^^^" GiB.^^^"&amp;echo:echo:End If)</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
 					<Order>26</Order>
-					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:bcdboot.exe W:\Windows /s S: ^|^| call :fail ^"bcdboot.exe encountered an error.^"&amp;echo:bcdedit.exe /set {fwbootmgr} bootsequence {bootmgr}&amp;echo:call :print ^"Copying answer file to target disk^"&amp;echo:mkdir W:\Windows\Panther)</Path>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:WScript.Echo ^^^"Disk assertions were satisfied.^^^"&amp;echo:echo:WScript.Quit 0&amp;echo:^)&amp;echo:call :print ^"Running disk assertions^")</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
 					<Order>27</Order>
-					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:copy ^%XML_FILE^% W:\Windows\Panther\unattend.xml&amp;echo:if defined PEDRIVERS_FOLDER (&amp;echo:call :print ^"Adding drivers from $WinPEDriver$ folder to new installation^")</Path>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:cscript.exe //E:vbscript ^"X:\assert.vbs^" //Nologo ^|^| call :fail ^"Disk assertion failed. Windows Setup will halt to avoid potential data loss.^"&amp;echo:^&gt;X:\GPT.txt (&amp;echo:echo:SELECT DISK=^%TARGET_DISK^%&amp;echo:echo:CLEAN)</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
 					<Order>28</Order>
-					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:dism.exe /Add-Driver /Image:W:\ /Driver:^"^%PEDRIVERS_FOLDER^%^" /Recurse&amp;echo:^)&amp;echo:call :print ^"Setting device setup region to Russia (GeoID 203^)^"&amp;echo:reg.exe LOAD HKLM\mount W:\Windows\System32\config\SOFTWARE)</Path>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:CONVERT GPT&amp;echo:echo:CREATE PARTITION EFI SIZE=300&amp;echo:echo:FORMAT QUICK FS=FAT32 LABEL=^"System^"&amp;echo:echo:ASSIGN LETTER=S&amp;echo:echo:CREATE PARTITION MSR SIZE=16&amp;echo:echo:CREATE PARTITION PRIMARY)</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
 					<Order>29</Order>
-					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:reg.exe ADD ^"HKLM\mount\Microsoft\Windows\CurrentVersion\Control Panel\DeviceRegion^" /v DeviceRegion /t REG_DWORD /d 203 /f&amp;echo:reg.exe UNLOAD HKLM\mount&amp;echo:call :print ^"Computer will now reboot^")</Path>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:SHRINK MINIMUM=1000&amp;echo:echo:FORMAT QUICK FS=NTFS LABEL=^"Windows^"&amp;echo:echo:ASSIGN LETTER=W&amp;echo:echo:CREATE PARTITION PRIMARY&amp;echo:echo:FORMAT QUICK FS=NTFS LABEL=^"Recovery^"&amp;echo:echo:ASSIGN LETTER=R)</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
 					<Order>30</Order>
-					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:wpeutil.exe reboot&amp;echo:goto :eof&amp;echo::fail&amp;echo:echo:&amp;echo:echo:Fatal error: ^%~1&amp;echo:echo:&amp;echo:pause&amp;echo:exit 1&amp;echo::print&amp;echo:echo:&amp;echo:echo:*** ^%~1 ***&amp;echo:echo:&amp;echo:goto :eof)</Path>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:SET ID=^"de94bba4-06d1-4d40-a16a-bfd50179d6ac^"&amp;echo:echo:GPT ATTRIBUTES=0x8000000000000001&amp;echo:^)&amp;echo:^&gt;X:\MBR.txt (&amp;echo:echo:SELECT DISK=^%TARGET_DISK^%&amp;echo:echo:CLEAN&amp;echo:echo:CREATE PARTITION PRIMARY SIZE=300)</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
 					<Order>31</Order>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:FORMAT QUICK FS=NTFS LABEL=^"System^"&amp;echo:echo:ASSIGN LETTER=S&amp;echo:echo:ACTIVE&amp;echo:echo:CREATE PARTITION PRIMARY&amp;echo:echo:SHRINK MINIMUM=1000&amp;echo:echo:FORMAT QUICK FS=NTFS LABEL=^"Windows^"&amp;echo:echo:ASSIGN LETTER=W)</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>32</Order>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:echo:CREATE PARTITION PRIMARY&amp;echo:echo:FORMAT QUICK FS=NTFS LABEL=^"Recovery^"&amp;echo:echo:ASSIGN LETTER=R&amp;echo:echo:SET ID=27&amp;echo:^)&amp;echo:wpeutil.exe UpdateBootInfo)</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>33</Order>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:for /f ^"tokens=3^" ^%^%t in ('reg.exe query HKLM\System\CurrentControlSet\Control /v PEFirmwareType'^) do (&amp;echo:if ^%^%t == 0x1 (&amp;echo:set ^"LAYOUT=MBR^"&amp;echo:^) else if ^%^%t == 0x2 (&amp;echo:set ^"LAYOUT=GPT^"&amp;echo:^) else ()</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>34</Order>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:call :fail ^"Unexpected value ^%^%t.^"&amp;echo:^)&amp;echo:^)&amp;echo:call :print ^"The target disk will be configured with the ^%LAYOUT^% partition layout^")</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>35</Order>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:call :print ^"diskpart will now wipe, partition and format disk ^%TARGET_DISK^%^"&amp;echo:diskpart.exe /s X:\^%LAYOUT^%.txt ^|^| call :fail ^"diskpart.exe encountered an error.^")</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>36</Order>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:set ^"IMG_PARAM=/Name:^"Windows ^%OS_VERSION^% Pro^"^"&amp;echo:call :print ^"Applying Windows image to target disk^")</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>37</Order>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:dism.exe /Apply-Image /ImageFile:^%IMAGE_FILE^% ^%SWM_PARAM^% ^%IMG_PARAM^% /ApplyDir:W:\ /CheckIntegrity /Verify ^|^| call :fail ^"dism.exe encountered an error.^"&amp;echo:call :print ^"Making system partition bootable^")</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>38</Order>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:bcdboot.exe W:\Windows /s S: ^|^| call :fail ^"bcdboot.exe encountered an error.^"&amp;echo:bcdedit.exe /set {fwbootmgr} bootsequence {bootmgr}&amp;echo:call :print ^"Copying answer file to target disk^"&amp;echo:mkdir W:\Windows\Panther)</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>39</Order>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:copy ^%XML_FILE^% W:\Windows\Panther\unattend.xml&amp;echo:if defined PEDRIVERS_FOLDER (&amp;echo:call :print ^"Adding drivers from $WinPEDriver$ folder to new installation^")</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>40</Order>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:dism.exe /Add-Driver /Image:W:\ /Driver:^"^%PEDRIVERS_FOLDER^%^" /Recurse&amp;echo:^)&amp;echo:call :print ^"Setting device setup region to Russia (GeoID 203^)^"&amp;echo:reg.exe LOAD HKLM\mount W:\Windows\System32\config\SOFTWARE)</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>41</Order>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:reg.exe ADD ^"HKLM\mount\Microsoft\Windows\CurrentVersion\Control Panel\DeviceRegion^" /v DeviceRegion /t REG_DWORD /d 203 /f&amp;echo:reg.exe UNLOAD HKLM\mount&amp;echo:call :print ^"Computer will now reboot^")</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>42</Order>
+					<Path>cmd.exe /c &gt;&gt;X:\pe.cmd (echo:wpeutil.exe reboot&amp;echo:goto :eof&amp;echo::fail&amp;echo:echo:&amp;echo:echo:Fatal error: ^%~1&amp;echo:echo:&amp;echo:pause&amp;echo:exit 1&amp;echo::print&amp;echo:echo:&amp;echo:echo:*** ^%~1 ***&amp;echo:echo:&amp;echo:goto :eof)</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>43</Order>
 					<Path>cmd.exe /c "X:\pe.cmd"</Path>
 				</RunSynchronousCommand>
 			</RunSynchronous>
@@ -208,8 +256,8 @@
 	<Extensions xmlns="https://schneegans.de/windows/unattend-generator/">
 		<Build>
 			<Commit>
-				<Hash>f1ce9a9d75259173f0a3f2ef8c84230c731986d9</Hash>
-				<GitHubUrl>https://github.com/cschneegans/unattend-generator/commit/f1ce9a9d75259173f0a3f2ef8c84230c731986d9</GitHubUrl>
+				<Hash>8a362f03a8b97bc7e583643818be33444636bb43</Hash>
+				<GitHubUrl>https://github.com/cschneegans/unattend-generator/commit/8a362f03a8b97bc7e583643818be33444636bb43</GitHubUrl>
 			</Commit>
 		</Build>
 		<ExtractScript>
@@ -274,19 +322,36 @@ foreach( $file in $Document.unattend.Extensions.File ) {
 &lt;/Task&gt;
 		</File>
 		<File path="C:\Windows\Setup\Scripts\unattend-01.ps1">
+$Path = "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\DeployLauncher.cmd"
+$Content = @'
 @echo off
-set "startupPath=C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\DeployLauncher.cmd"
+title Deploy Launcher
+mode con: cols=80 lines=15
+echo === Waiting for Deploy drive ===
 
-echo @echo off &gt; "%startupPath%"
-echo mode con: cols=80 lines=15 &gt;&gt; "%startupPath%"
-echo echo === &#x41E;&#x436;&#x438;&#x434;&#x430;&#x43D;&#x438;&#x435; &#x434;&#x438;&#x441;&#x43A;&#x430; &#x441; &#x43F;&#x430;&#x43F;&#x43A;&#x43E;&#x439; Deploy === &gt;&gt; "%startupPath%"
-echo :LOOP &gt;&gt; "%startupPath%"
-echo powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "$d = (Get-Volume).Where({Test-Path ($_.DriveLetter + ':\Deploy\MainInstall.ps1')}).DriveLetter; if ($d) { Start-Process powershell.exe -ArgumentList '-NoProfile -ExecutionPolicy Bypass -File \"$d:\Deploy\MainInstall.ps1\"' -Verb RunAs ; exit 0 } else { exit 1 }" &gt;&gt; "%startupPath%"
-echo if %%ERRORLEVEL%% EQU 0 goto DONE &gt;&gt; "%startupPath%"
-echo timeout /t 3 /nobreak ^&gt; nul &gt;&gt; "%startupPath%"
-echo goto LOOP &gt;&gt; "%startupPath%"
-echo :DONE &gt;&gt; "%startupPath%"
-echo del "%%~f0" &gt;&gt; "%startupPath%"
+:LOOP
+set "TARGET="
+for %%d in (C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
+    if exist "%%d:\Deploy\MainInstall.ps1" (
+        set "TARGET=%%d:\Deploy\MainInstall.ps1"
+        goto FOUND
+    )
+)
+
+timeout /t 3 /nobreak &gt;nul
+goto LOOP
+
+:FOUND
+echo Found deploy script at: %TARGET%
+echo Requesting administrator privileges...
+
+powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -ArgumentList '-NoProfile -ExecutionPolicy Bypass -File \"%TARGET%\"' -Verb RunAs"
+
+del "%~f0"
+exit
+'@
+
+[System.IO.File]::WriteAllLines($Path, $Content)
 		</File>
 		<File path="C:\Windows\Setup\Scripts\Specialize.ps1">
 $scripts = @(
